@@ -42,4 +42,4 @@ See [SOURCES.md](SOURCES.md) for provenance. Unofficial fan material; not affili
 
 Open the hosted GitHub Pages app in Safari, tap Share, then Add to Home Screen. Keep Open as Web App enabled if offered. Open the Fallout Stories icon and wait for Install on iPhone to report Ready offline before disconnecting. Create or import your character inside the installed app. Export backups to Files.
 
-The original power-armour helmet badge includes a 180 px Apple touch icon and 192/512 px PWA icons. Records stay local to the browser/installed app; no character records are committed here.
+The simple yellow radiation symbol on blue includes a 180 px Apple touch icon and 192/512 px PWA icons. Records stay local to the browser/installed app; no character records are committed here.
