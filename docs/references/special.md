@@ -30,3 +30,8 @@ The separate Personal/Vehicle range framework is locked in, following EotE pp. 2
 Blade Technique now optionally substitutes Agility for both Melee checks and the characteristic contribution to Melee damage. This supersedes the check-only limitation above. Use underlying ratings (half displayed SPECIAL), not doubled scores. Brawl, soak, thresholds, carrying capacity and weapon bonuses are unaffected. Ronin's katana is 3 + 2 = 5 base damage, plus uncancelled successes; attack dice remain two Proficiency and one Ability. Same 10 XP talent, same 110 starting XP expenditure.
 
 This damage extension is an explicitly approved Fallout house rule, not the printed Ataru Technique effect. The original substitutes the characteristic for Lightsaber checks; lightsabers normally use fixed base damage. Source: https://imadeyoursite.com/Edge/trees/Seeker%20Full%20Career.pdf (Ataru tree, page 1).
+
+
+## Piloting characteristic (S0018)
+
+Both Piloting Air and Piloting Surface use Perception, replacing Agility. Use half displayed Perception for dice pools (retained engine key Cunning). This is an approved Fallout house rule. Ronin has Perception 4 and zero ranks in both skills, so each pool is 2 Ability dice. Skill ranks, XP and other skill mappings remain unchanged.
