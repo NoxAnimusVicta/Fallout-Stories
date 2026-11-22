@@ -122,3 +122,5 @@ label input,label select,label textarea { text-transform:none; letter-spacing:no
  #save-status { max-width:84px; text-align:right; font-size:.6rem; }
 }
 
+
+.attack-pool{display:flex;gap:16px;align-items:center;margin:12px 0;font-size:.8rem}.full-portrait{display:block;width:100%;height:auto}.talent-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.talent-node{padding:12px;border:1px solid var(--line);margin-bottom:12px}.talent-node.acquired{border-color:var(--green);background:#14ff1710}.talent-node h3{font-size:.85rem}.talent-node p{font-size:.8rem}.talent-node .eyebrow{font-size:.6rem}dialog:has(.talent-columns){width:min(1080px,calc(100% - 28px))}.identity-card:has(.portrait img) .portrait{height:340px}.portrait img{object-position:center 24%}@media(max-width:720px){.talent-columns{grid-template-columns:1fr}.identity-card:has(.portrait img){display:block}.identity-card:has(.portrait img) .portrait{height:340px;border-right:0;border-bottom:1px solid var(--line)}.identity-copy h2{margin:6px 0}.attack-pool{flex-wrap:wrap;gap:8px}}

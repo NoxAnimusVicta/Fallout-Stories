@@ -28,7 +28,7 @@ Open http://127.0.0.1:4173. `npm run build` copies `docs/` into `dist/` for stat
 
 ## Records and privacy
 
-Records are saved in localStorage under `fallout-stories-v1`, separately on each browser/origin/device. There is no backend, account, analytics or cloud sync. Export JSON backups before clearing browser data or changing hosts. Imports are validated, added as separate records and never overwrite an existing character. Invalid existing browser data is preserved until explicit recovery/reset. Portraits are reduced to 800 px and stored locally.
+The companion opens Ronin automatically from `docs/character.json`, the maintained campaign record. The portrait, inventory, backstory and purchased talents are included. `docs/class-reference.js` supplies the four talent columns. Blade Technique automatically substitutes Agility for Melee accuracy while leaving damage and other Brawn uses unchanged. Old browser character saves are not read, replaced or deleted. Session controls operate in memory; export to retain session changes. Reloading restores the published record. There is no backend, analytics or account requirement.
 
 The service worker caches app code and catalogue, not a server-side character record. The original campaign conversion and economy PDFs are included in the offline cache. On phones, use Add to Home Screen. Do not put private campaign data into tracked source files: everything in `docs/` is deployable.
 
@@ -40,6 +40,6 @@ See [SOURCES.md](SOURCES.md) for provenance. Unofficial fan material; not affili
 
 ## Install on iPhone
 
-Open the hosted GitHub Pages app in Safari, tap Share, then Add to Home Screen. Keep Open as Web App enabled if offered. Open the Fallout Stories icon and wait for Install on iPhone to report Ready offline before disconnecting. Create or import your character inside the installed app. Export backups to Files.
+Open the hosted GitHub Pages app in Safari, tap Share, then Add to Home Screen. Keep Open as Web App enabled if offered. Open the Fallout Stories icon and wait for Install on iPhone to report Ready offline before disconnecting. Ronin opens directly inside the installed app. No character import is needed.
 
 The simple yellow radiation symbol on blue includes a 180 px Apple touch icon and 192/512 px PWA icons. Records stay local to the browser/installed app; no character records are committed here.
