@@ -143,3 +143,10 @@ label input,label select,label textarea { text-transform:none; letter-spacing:no
 .special-row dd{margin:0}.special-score{font-size:1.75rem;line-height:1.2;text-align:center;font-variant-numeric:tabular-nums;color:var(--green)}
 .special-detail strong{font-size:.95rem;font-weight:600}.special-detail p{font-size:.875rem;color:var(--muted);line-height:1.4;margin:.2rem 0 0}
 @media(max-width:480px){.special-row{grid-template-columns:103px 28px minmax(0,1fr);gap:9px;padding:12px 0}.special-detail strong{font-size:.875rem}}
+
+/* Compact four-column talent overview; full rules open on tap. */
+.talent-scroll{overflow:visible;padding:0;margin:20px 0}.talent-grid{min-width:0;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 8px}
+.talent-grid .talent-node{text-align:left;white-space:normal;padding:12px;min-width:0;font-weight:400;display:flex;flex-direction:column;align-items:stretch;text-transform:none}
+.talent-grid .talent-status{display:block;font-size:.75rem;letter-spacing:0;text-transform:none;margin-top:3px}
+.talent-grid .has-prerequisite:before{height:19px;top:-20px}.talent-grid .talent-node:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+@media(max-width:700px){.talent-grid{gap:16px 6px}.talent-grid .talent-node{padding:9px 5px;min-height:96px}.talent-grid .talent-node p{display:none}.talent-grid h3{font-size:.875rem;line-height:1.25;overflow-wrap:anywhere;margin:9px 0 0}.talent-grid .eyebrow{font-size:.875rem;letter-spacing:0}.talent-grid .talent-status{font-size:.7rem}.talent-grid .has-prerequisite:before{height:17px;top:-18px}}

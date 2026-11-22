@@ -183,7 +183,7 @@
         "name": "Blade Technique",
         "rank": 1,
         "cost": 10,
-        "notes": "Use Agility for Melee checks. Damage still uses Strength."
+        "notes": "Use Agility for Melee checks and the characteristic contribution to Melee damage. Uses half the displayed SPECIAL score."
       },
       {
         "id": "wb11-2",
@@ -223,17 +223,18 @@
         "id": "3f5f1061-f6e2-474a-8e77-ed13a87f83be",
         "name": "Street-sign katana",
         "skill": "Melee",
-        "damage": 4,
+        "damage": 5,
         "crit": 3,
         "range": "Engaged",
-        "qualities": "Hand-ground from a street-sign pole. Brawn + 2 damage; Blade Technique uses Agility for accuracy.",
+        "qualities": "Hand-ground from a street-sign pole. Agility contribution 3 + weapon bonus 2 = 5 base damage. Add uncancelled successes on a hit.",
         "scale": "personal",
         "ammo": "",
         "capacity": 0,
         "loaded": 0,
         "cost": 0,
         "reload": "magazine",
-        "auto": false
+        "auto": false,
+        "rangeScale": "personal"
       }
     ],
     "ammo": {},
@@ -273,5 +274,5 @@
     "notes": "A year on the road. His old clothes and street-sign katana are all that remain of home. The easy smile hides a man still trying to decide which parts of his life belong to him.",
     "destinyRemaining": 1
   },
-  "release": "ronin-2.0.5"
+  "release": "ronin-2.0.8"
 }

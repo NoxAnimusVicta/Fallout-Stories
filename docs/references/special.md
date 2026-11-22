@@ -21,3 +21,12 @@ Ronin starts with 20 caps by player instruction; this is starting equipment allo
 The vertical list is inspired by the New Vegas Vigor Tester. Brief current-rank labels are verified against [New Vegas SPECIAL](https://fallout.fandom.com/wiki/Fallout%3A_New_Vegas_SPECIAL); other ratings use descriptive fallback labels. The explanatory sentences describe this campaign's mechanics, not New Vegas's derived-stat formulas. Labels are flavor and confer no modifiers.
 
 Phone icons are opaque RGB PNGs with blue #164B7A and yellow #F6CF45, served under new filenames. iOS may retain artwork for an existing Home Screen installation; replacing that shortcut may be necessary to receive the new icon.
+
+
+## S0014 — accepted amendments
+
+The separate Personal/Vehicle range framework is locked in, following EotE pp. 238–239: Vehicle Close contains personal ranges, broader vehicle ranges suit aircraft/artillery, speed governs vehicle movement, and mounted personal weapons retain personal ranges. Power armor retains personal movement. Damage and range scales are independent.
+
+Blade Technique now optionally substitutes Agility for both Melee checks and the characteristic contribution to Melee damage. This supersedes the check-only limitation above. Use underlying ratings (half displayed SPECIAL), not doubled scores. Brawl, soak, thresholds, carrying capacity and weapon bonuses are unaffected. Ronin's katana is 3 + 2 = 5 base damage, plus uncancelled successes; attack dice remain two Proficiency and one Ability. Same 10 XP talent, same 110 starting XP expenditure.
+
+This damage extension is an explicitly approved Fallout house rule, not the printed Ataru Technique effect. The original substitutes the characteristic for Lightsaber checks; lightsabers normally use fixed base damage. Source: https://imadeyoursite.com/Edge/trees/Seeker%20Full%20Career.pdf (Ataru tree, page 1).
