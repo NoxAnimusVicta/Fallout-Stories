@@ -1,45 +1,37 @@
 # Fallout Stories
 
-A responsive, installable Fallout campaign companion using the agreed Edge of the Empire conversion. Inspired by the tabbed record layout of [Cyberpunk Stories](https://github.com/NoxAnimusVicta/Cyberpunk-Stories), with a new editable data model and Fallout styling.
+Ronin’s read-only Fallout / Edge of the Empire companion.
 
-## Features
+Live app: https://noxanimusvicta.github.io/Fallout-Stories/
 
-- Multiple local character records, portraits, skills and positive narrative dice pools, talents, XP, Luck and Obligation.
-- Personal wounds/strain and radiation, consumable chems, delayed RadAway, daily stimpak tracking and recorded dependence.
-- Silhouette 2 power armour as a vehicle, with separate hull/system strain, five chassis profiles, Brawn/Agility substitution and the 20 XP training talent.
-- Damage calculator using **ceil((personal damage − 10 × remaining Armour) / 10)**, minimum zero. Pierce below 10 cannot reduce vehicle Armour.
-- Weapon cards, shared ammunition reserves, attack expenditure and capacity-limited reloads.
-- Carried inventory, named storage locations and a 668-item source-linked Fallout 4 price catalogue. Shop/base prices are distinct; purchases and sales update caps.
-- Journal and manually controlled story clock; JSON export/import; offline interface after an initial online visit.
-- In-app quick rules and full campaign conversion/economy PDFs under About & rules.
+GitHub Pages serves `main` from `/docs`. This is the canonical player app. Publishing a separate Sites deployment does not update GitHub Pages.
 
-New records are unallocated human templates, not completed legal starting characters. This is a table companion, not a character-creation validator or dice roller. Weapon combat stats, criticals, species details and remaining EotE rules are entered or resolved at the table. Catalogue weapon purchases do not invent converted combat stats.
+## Current interface
+
+Ronin opens automatically with his portrait and maintained record. Tabs: Character, Talents, Inventory, Health, Assets and Journal. The talent tree is a four-column grid with vertical prerequisites. Ability dice are green diamonds; Proficiency dice are yellow hexagons. Personal Destiny is displayed against Luck, with no shared pool. Weapons and ammunition appear in Inventory. Assets contains no unowned power-armor reference sheet. There are no player editing or import controls.
+
+The journal records the Kansas City origin and accepted westward journey. Narrator-only plans and local transcripts are never deployed.
 
 ## Run and verify
 
-Node 20 or newer; no dependencies or build service required.
+Use Node 20 or newer. No dependencies are required.
 
 ```sh
-npm test
-npm start
+node --test tests/rules.test.js
+node server.mjs
+node build.mjs
 ```
 
-Open http://127.0.0.1:4173. `npm run build` copies `docs/` into `dist/` for static hosting. GitHub Pages can serve `main / docs`; all paths are relative. Sites uses `.openai/hosting.json` and `dist/`.
+Preview: http://127.0.0.1:4173. Build copies `docs` into `dist`; GitHub Pages uses `docs` directly.
 
-## Records and privacy
+## Release checklist
 
-The companion opens Ronin automatically from `docs/character.json`, the maintained campaign record. The portrait, inventory, backstory and purchased talents are included. `docs/class-reference.js` supplies the four talent columns. Blade Technique automatically substitutes Agility for Melee accuracy while leaving damage and other Brawn uses unchanged. Old browser character saves are not read, replaced or deleted. Session controls operate in memory; export to retain session changes. Reloading restores the published record. There is no backend, analytics or account requirement.
+Check the current remote branch before publishing. Commit the approved app changes and push to GitHub main without force. Wait for Pages deployment, compare live asset hashes with the release, and inspect the rendered tabs. Increment asset and service-worker cache versions together. A successful HTTP response alone does not verify the deployed revision.
 
-The service worker caches app code and catalogue, not a server-side character record. The original campaign conversion and economy PDFs are included in the offline cache. On phones, use Add to Home Screen. Do not put private campaign data into tracked source files: everything in `docs/` is deployable.
+## iPhone and offline use
 
-## Mechanics notes
+Open the live app in Safari and use Share → Add to Home Screen. The existing blue/yellow radiation icon is supplied at Apple and PWA sizes. The service worker caches the published record and reference files for offline use; online requests prefer current server content. New workers activate after completing their cache, so old installations are not held on a waiting worker. Reopen online to receive current data.
 
-Thresholds and personal soak are explicit sheet fields so talents and species can be applied without guessing. Suit values affect only active powered physical checks; biological Resilience uses personal Brawn. Each penetrating hit is rounded separately; no fractional hull and no summing ineffective Auto-fire hits. Core consumption is an explicit narrative record, separate from weapon ammunition. Chem duration controls advance only the named effects; dependence timing and recovery require GM resolution.
+The public record is in `docs/character.json`. Keep private campaign records out of this repository and deployment. Session state is maintained by the narrator; this companion displays the published snapshot.
 
-See [SOURCES.md](SOURCES.md) for provenance. Unofficial fan material; not affiliated with Bethesda, Fantasy Flight Games or their successors.
-
-## Install on iPhone
-
-Open the hosted GitHub Pages app in Safari, tap Share, then Add to Home Screen. Keep Open as Web App enabled if offered. Open the Fallout Stories icon and wait for Install on iPhone to report Ready offline before disconnecting. Ronin opens directly inside the installed app. No character import is needed.
-
-The simple yellow radiation symbol on blue includes a 180 px Apple touch icon and 192/512 px PWA icons. Records stay local to the browser/installed app; no character records are committed here.
+See SOURCES.md for provenance. Unofficial fan material, not affiliated with Bethesda or the EotE rights holders.
