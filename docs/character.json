@@ -161,7 +161,7 @@
     "defenceMelee": 0,
     "defenceRanged": 0,
     "rads": 0,
-    "caps": 0,
+    "caps": 20,
     "xp": 0,
     "totalXp": 110,
     "luckPlayer": 0,
@@ -183,7 +183,7 @@
         "name": "Blade Technique",
         "rank": 1,
         "cost": 10,
-        "notes": "Use Agility for Melee checks. Damage still uses Brawn."
+        "notes": "Use Agility for Melee checks. Damage still uses Strength."
       },
       {
         "id": "wb11-2",
@@ -273,5 +273,5 @@
     "notes": "A year on the road. His old clothes and street-sign katana are all that remain of home. The easy smile hides a man still trying to decide which parts of his life belong to him.",
     "destinyRemaining": 1
   },
-  "release": "ronin-2.0.4"
+  "release": "ronin-2.0.5"
 }

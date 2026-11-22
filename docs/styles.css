@@ -135,3 +135,11 @@ label input,label select,label textarea { text-transform:none; letter-spacing:no
 .talent-scroll{overflow-x:auto;padding:2px 2px 16px;margin:24px 0}.talent-grid{display:grid;grid-template-columns:repeat(4,minmax(190px,1fr));gap:24px 16px;min-width:808px}.talent-grid .talent-node{margin:0;min-height:0}.talent-grid .has-prerequisite:before{content:"";position:absolute;height:25px;width:2px;background:var(--line);top:-26px;left:50%}.talent-grid .eyebrow{font-size:.75rem}.talent-grid h3{font-size:1.05rem}dialog:has(.talent-grid){width:min(1100px,calc(100% - 28px))}
 
 .attributes{grid-template-columns:repeat(7,minmax(0,1fr))}@media(max-width:700px){.attributes{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Vigor Tester-style vertical SPECIAL summary, including narrow phones. */
+.special-list{margin:0;border-top:1px solid var(--line)}
+.special-row{display:grid;grid-template-columns:minmax(105px,1fr) 44px minmax(0,2fr);align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.special-row dt{font-size:1rem;font-weight:650;color:var(--green)}
+.special-row dd{margin:0}.special-score{font-size:1.75rem;line-height:1.2;text-align:center;font-variant-numeric:tabular-nums;color:var(--green)}
+.special-detail strong{font-size:.95rem;font-weight:600}.special-detail p{font-size:.875rem;color:var(--muted);line-height:1.4;margin:.2rem 0 0}
+@media(max-width:480px){.special-row{grid-template-columns:103px 28px minmax(0,1fr);gap:9px;padding:12px 0}.special-detail strong{font-size:.875rem}}
