@@ -1,4 +1,4 @@
-const CACHE='fallout-stories-v1.1.3';
+const CACHE='fallout-stories-v1.1.4';
 const ASSETS=['./','./index.html','./app.js','./rules.js','./styles.css','./catalogue.json','./icon.svg?v=2','./manifest.webmanifest?v=2','./assets/apple-touch-icon.png?v=2','./assets/icon-192.png?v=2','./assets/icon-512.png?v=2','./references/conversion.pdf','./references/economy.pdf'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('fallout-stories-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
