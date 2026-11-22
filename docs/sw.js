@@ -1,5 +1,5 @@
-const CACHE='fallout-stories-v1.1.1';
-const ASSETS=['./','./index.html','./app.js','./rules.js','./styles.css','./catalogue.json','./icon.svg','./manifest.webmanifest','./assets/apple-touch-icon.png','./assets/icon-192.png','./assets/icon-512.png'];
+const CACHE='fallout-stories-v1.1.2';
+const ASSETS=['./','./index.html','./app.js','./rules.js','./styles.css','./catalogue.json','./icon.svg','./manifest.webmanifest','./assets/apple-touch-icon.png','./assets/icon-192.png','./assets/icon-512.png','./references/conversion.pdf','./references/economy.pdf'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('fallout-stories-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{const url=new URL(event.request.url);if(event.request.method!=='GET'||url.origin!==self.location.origin||!url.pathname.startsWith(new URL(self.registration.scope).pathname))return;event.respondWith(fetch(event.request).then(response=>{if(response.ok&&response.status!==206){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(event.request,copy)));}return response;}).catch(()=>caches.match(event.request).then(response=>response||new Response('Unavailable offline',{status:503}))));});

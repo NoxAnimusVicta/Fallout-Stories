@@ -11,7 +11,7 @@ A responsive, installable Fallout campaign companion using the agreed Edge of th
 - Weapon cards, shared ammunition reserves, attack expenditure and capacity-limited reloads.
 - Carried inventory, named storage locations and a 668-item source-linked Fallout 4 price catalogue. Shop/base prices are distinct; purchases and sales update caps.
 - Journal and manually controlled story clock; JSON export/import; offline interface after an initial online visit.
-- In-app quick rules; full conversion and economy PDFs remain separate local campaign documents.
+- In-app quick rules and full campaign conversion/economy PDFs under About & rules.
 
 New records are unallocated human templates, not completed legal starting characters. This is a table companion, not a character-creation validator or dice roller. Weapon combat stats, criticals, species details and remaining EotE rules are entered or resolved at the table. Catalogue weapon purchases do not invent converted combat stats.
 
@@ -30,7 +30,7 @@ Open http://127.0.0.1:4173. `npm run build` copies `docs/` into `dist/` for stat
 
 Records are saved in localStorage under `fallout-stories-v1`, separately on each browser/origin/device. There is no backend, account, analytics or cloud sync. Export JSON backups before clearing browser data or changing hosts. Imports are validated, added as separate records and never overwrite an existing character. Invalid existing browser data is preserved until explicit recovery/reset. Portraits are reduced to 800 px and stored locally.
 
-The service worker caches app code and catalogue, not a server-side character record. The separate local campaign PDFs are not published or pre-cached. On phones, use Add to Home Screen. Do not put private campaign data into tracked source files: everything in `docs/` is deployable.
+The service worker caches app code and catalogue, not a server-side character record. The original campaign conversion and economy PDFs are included in the offline cache. On phones, use Add to Home Screen. Do not put private campaign data into tracked source files: everything in `docs/` is deployable.
 
 ## Mechanics notes
 
