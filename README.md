@@ -11,7 +11,7 @@ A responsive, installable Fallout campaign companion using the agreed Edge of th
 - Weapon cards, shared ammunition reserves, attack expenditure and capacity-limited reloads.
 - Carried inventory, named storage locations and a 668-item source-linked Fallout 4 price catalogue. Shop/base prices are distinct; purchases and sales update caps.
 - Journal and manually controlled story clock; JSON export/import; offline interface after an initial online visit.
-- Full conversion and economy PDFs under About & rules.
+- In-app quick rules; full conversion and economy PDFs remain separate local campaign documents.
 
 New records are unallocated human templates, not completed legal starting characters. This is a table companion, not a character-creation validator or dice roller. Weapon combat stats, criticals, species details and remaining EotE rules are entered or resolved at the table. Catalogue weapon purchases do not invent converted combat stats.
 
@@ -30,7 +30,7 @@ Open http://127.0.0.1:4173. `npm run build` copies `docs/` into `dist/` for stat
 
 Records are saved in localStorage under `fallout-stories-v1`, separately on each browser/origin/device. There is no backend, account, analytics or cloud sync. Export JSON backups before clearing browser data or changing hosts. Imports are validated, added as separate records and never overwrite an existing character. Invalid existing browser data is preserved until explicit recovery/reset. Portraits are reduced to 800 px and stored locally.
 
-The service worker caches app code and catalogue, not a server-side character record. PDFs are not pre-cached. On phones, use Add to Home Screen. Do not put private campaign data into tracked source files: everything in `docs/` is deployable.
+The service worker caches app code and catalogue, not a server-side character record. The separate local campaign PDFs are not published or pre-cached. On phones, use Add to Home Screen. Do not put private campaign data into tracked source files: everything in `docs/` is deployable.
 
 ## Mechanics notes
 
@@ -38,3 +38,8 @@ Thresholds and personal soak are explicit sheet fields so talents and species ca
 
 See [SOURCES.md](SOURCES.md) for provenance. Unofficial fan material; not affiliated with Bethesda, Fantasy Flight Games or their successors.
 
+## Install on iPhone
+
+Open the hosted GitHub Pages app in Safari, tap Share, then Add to Home Screen. Keep Open as Web App enabled if offered. Open the Fallout Stories icon and wait for Install on iPhone to report Ready offline before disconnecting. Create or import your character inside the installed app. Export backups to Files.
+
+The original power-armour helmet badge includes a 180 px Apple touch icon and 192/512 px PWA icons. Records stay local to the browser/installed app; no character records are committed here.

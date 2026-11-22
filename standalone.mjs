@@ -1,0 +1,15 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const html=await readFile('docs/index.html','utf8');
+const css=await readFile('docs/styles.css','utf8');
+const rules=(await readFile('docs/rules.js','utf8')).replace(/^export /gm,'');
+const catalogue=JSON.parse(await readFile('docs/catalogue.json','utf8'));
+let app=(await readFile('docs/app.js','utf8')).replace(/^import .*?;\s*/,'');
+const fetchStart=app.indexOf("try{const response=await fetch('./catalogue.json')");
+const fetchEnd=app.indexOf('\nrender();persist();',fetchStart);
+if(fetchStart<0||fetchEnd<0)throw Error('Catalogue bootstrap not found');
+app=app.slice(0,fetchStart)+'catalogue='+JSON.stringify(catalogue).replace(/</g,'\\u003c')+';'+app.slice(fetchEnd);
+app=app.replace("if('serviceWorker' in navigator)","if(location.protocol!=='file:'&&'serviceWorker' in navigator)");
+const script=(rules+'\n'+app).replace(/<\/script/gi,'<\\/script');
+const out=html.replace('<link rel="stylesheet" href="./styles.css">','<style>'+css+'</style>').replace('<script type="module" src="./app.js"></script>','<script type="module">'+script+'</script>').replace('<link rel="manifest" href="./manifest.webmanifest">','').replace('<link rel="icon" href="./icon.svg" type="image/svg+xml">','');
+await writeFile(process.argv[2]||'dist/standalone.html',out);
+console.log('Standalone companion generated. Keep references/ beside the file for PDF links.');
