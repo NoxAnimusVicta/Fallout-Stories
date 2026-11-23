@@ -150,3 +150,4 @@ label input,label select,label textarea { text-transform:none; letter-spacing:no
 .talent-grid .talent-status{display:block;font-size:.75rem;letter-spacing:0;text-transform:none;margin-top:3px}
 .talent-grid .has-prerequisite:before{height:19px;top:-20px}.talent-grid .talent-node:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 @media(max-width:700px){.talent-grid{gap:16px 6px}.talent-grid .talent-node{padding:9px 5px;min-height:96px}.talent-grid .talent-node p{display:none}.talent-grid h3{font-size:.875rem;line-height:1.25;overflow-wrap:anywhere;margin:9px 0 0}.talent-grid .eyebrow{font-size:.875rem;letter-spacing:0}.talent-grid .talent-status{font-size:.7rem}.talent-grid .has-prerequisite:before{height:17px;top:-18px}}
+@media(max-width:400px){.talent-grid h3{font-size:.75rem;letter-spacing:0;overflow-wrap:normal;word-break:normal}}

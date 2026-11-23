@@ -26,3 +26,9 @@ The supplied Standard_Galactica_Ruleset.md, XP Allocation → Session XP (lines3
 Weapon combat profiles are adopted EotE slugthrower profiles, with campaign-specific calibre/capacity. They are not claimed Fallout game damage conversions. The JSON weapon `cost` field means ammunition per attack, not item value; resale valuations remain pending.
 
 Public summaries contain played events and disclosed information only. Private narrator plans, full transcripts and raw source documents remain local.
+
+## Ling — release 3.0.0
+
+Human creation: EotE core pp.48,80,92–94. Gunslinger career skills and talents: Fly Casual pp.30–33. Published row/column placement retained; campaign vertical prerequisites replace connections. Core pp.210–211 govern two-weapon attacks. Each participating pistol expends one round under the tracked-ammunition campaign rule. The primary sourcebooks are not redistributed.
+
+Pistols use the core slugthrower pistol combat profile (p.160), with Fallout .38 / 12-round configuration. Equipment and 20 caps are a modest starting allocation, not currency conversion. Oath 10 uses the solo campaign baseline. Ling’s portrait is user supplied. No extra XP from backstory or Obligation.
