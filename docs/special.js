@@ -1,11 +1,11 @@
 // SPECIAL is a presentation scale; the established EotE engine retains its ratings.
 export const SPECIAL=[
   {key:'Brawn',name:'Strength',description:'Physical power, lifting, unarmed force and weapon damage.'},
-  {key:'Cunning',name:'Perception',description:'Awareness, reading a situation and surviving the wasteland.'},
+  {key:'Cunning',name:'Perception',description:'Awareness, piloting, reading a situation and surviving the wasteland.'},
   {key:'Willpower',name:'Endurance',description:'Resolve under pressure, discipline and resistance to strain.'},
   {key:'Presence',name:'Charisma',description:'Social confidence, persuasion, leadership and composure.'},
   {key:'Intellect',name:'Intelligence',description:'Reasoning, technical knowledge, medicine and repairs.'},
-  {key:'Agility',name:'Agility',description:'Coordination, stealth, shooting and Blade Technique accuracy.'},
+  {key:'Agility',name:'Agility',description:'Coordination, stealth, shooting, and Blade Technique checks and damage.'},
   {key:'Luck',name:'Luck',description:'Fortune in a tight spot. Every two points provide one Destiny Point.'}
 ];
 export const specialScore=rating=>rating*2;
