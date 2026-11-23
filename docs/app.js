@@ -1,12 +1,12 @@
-import {SPECIAL,specialScore,specialName,specialDescriptor} from './special.js?v=3.0.0';
-import {talentColumns} from './class-reference.js?v=3.0.0';
-import {SKILLS,radPenalty,effectiveStrain,suitFor,suitActive,attribute,skillPool,skillCharacteristic,validateCharacter} from './rules.js?v=3.0.0';
+import {SPECIAL,specialScore,specialName,specialDescriptor} from './special.js?v=3.0.1';
+import {talentColumns} from './class-reference.js?v=3.0.1';
+import {SKILLS,radPenalty,effectiveStrain,suitFor,suitActive,attribute,skillPool,skillCharacteristic,validateCharacter} from './rules.js?v=3.0.1';
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const NAV=[['character','Character'],['talents','Talents'],['inventory','Inventory'],['health','Health'],['assets','Assets'],['journal','Journal']];
 let tab=location.hash.slice(1)||'character';
 let publishedRecord;
 try {
- const response=await fetch('./character.json?v=3.0.0',{cache:'no-cache'});
+ const response=await fetch('./character.json?v=3.0.1',{cache:'no-cache'});
  if(!response.ok)throw Error('Record unavailable');
  publishedRecord=await response.json();validateCharacter(publishedRecord.character);
 } catch(error) {
@@ -46,11 +46,11 @@ const actions={
 document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(b&&!b.disabled)actions[b.dataset.action]?.(b);});
 $('#close-dialog').onclick=()=>$('#detail').close();
 window.addEventListener('hashchange',()=>{tab=location.hash.slice(1);render();window.scrollTo({top:0});});
-$('#save-status').textContent='Ling · v3.0.0';
+$('#save-status').textContent='Ling · v3.0.1';
 function rulesHelp(){modal('Campaign Rules',`<h2>Campaign Rules</h2><p>This is ${esc(c.name)}’s maintained, read-only record. No import or editing is needed.</p><p>SPECIAL scores display twice their underlying ratings. Both Piloting skills use Perception.</p><p>Outside combat, unspent Advantage recovers 1 strain each unless you choose otherwise. Destiny refreshes when a new gameplay session starts, never on reload.</p><p>Personal and Vehicle range bands are separate; weapon damage scale does not determine range scale.</p><div class="reference-links"><a href="./references/current-rules.md" target="_blank">Current Rules & Amendments</a><a href="./references/conversion.pdf" target="_blank">Base Conversion</a><a href="./references/economy.pdf" target="_blank">Economy & 668-Item Roster</a><a href="./references/special.md" target="_blank">SPECIAL & Talent Clarifications</a></div><p class="small muted">Current amendments supersede older passages in the base conversion. Private narrator notes are not included.</p>`);}
 $('#help-button').onclick=rulesHelp;
 function installHelp(){modal('Install on iPhone',`<img class="install-icon" src="./assets/blue-v3-512.png" alt="Yellow radiation symbol on blue"><h2>Fallout Stories on Your iPhone</h2><ol class="install-steps"><li>Open this site in Safari.</li><li>Tap Share, then Add to Home Screen.</li><li>Keep Open as Web App enabled if shown, then tap Add.</li><li>Open the icon. Ling’s published record loads automatically.</li></ol><p id="offline-status" class="offline-status">Checking offline preparation…</p><p class="small muted">Open online to receive updates before playing offline. Reopening never awards XP or refreshes resources.</p>`);checkOffline();}
-async function checkOffline(){const el=$('#offline-status');try{const reg=await navigator.serviceWorker.getRegistration('./');const paths=['./index.html','./app.js?v=3.0.0','./rules.js?v=3.0.0','./styles.css?v=3.0.0','./character.json?v=3.0.0','./class-reference.js?v=3.0.0','./special.js?v=3.0.0','./references/current-rules.md','./references/special.md','./references/conversion.pdf','./references/economy.pdf'];const cached=await Promise.all(paths.map(path=>caches.match(new URL(path,location.href).href)));el.textContent=reg?.active&&cached.every(Boolean)?'Ready Offline · Ling’s Record & Rules':'Still preparing offline files. Stay online briefly, then reopen this panel.';}catch{el.textContent='Offline preparation needs the hosted HTTPS app or a local preview.';}}
+async function checkOffline(){const el=$('#offline-status');try{const reg=await navigator.serviceWorker.getRegistration('./');const paths=['./index.html','./app.js?v=3.0.1','./rules.js?v=3.0.1','./styles.css?v=3.0.1','./character.json?v=3.0.1','./class-reference.js?v=3.0.1','./special.js?v=3.0.1','./references/current-rules.md','./references/special.md','./references/conversion.pdf','./references/economy.pdf'];const cached=await Promise.all(paths.map(path=>caches.match(new URL(path,location.href).href)));el.textContent=reg?.active&&cached.every(Boolean)?'Ready Offline · Ling’s Record & Rules':'Still preparing offline files. Stay online briefly, then reopen this panel.';}catch{el.textContent='Offline preparation needs the hosted HTTPS app or a local preview.';}}
 $('#install-button').onclick=installHelp;
 render();
 if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(reg=>reg.update()).catch(()=>{});

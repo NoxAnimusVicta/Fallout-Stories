@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "release": "ling-3.0.0",
+  "release": "ling-3.0.1",
   "character": {
     "id": "ling",
     "name": "Ling",
@@ -164,7 +164,7 @@
           "ability": 2
         }
       },
-      "Perception": {
+      "Awareness": {
         "rank": 1,
         "career": true,
         "attribute": "Cunning",

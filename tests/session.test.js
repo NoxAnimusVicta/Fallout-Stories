@@ -31,7 +31,7 @@ test('two pistols consume separate magazines and share exactly twelve reserve ro
 test('public projection is read-only and excludes prior campaign and private payloads',async()=>{
  const app=await readFile(new URL('../docs/app.js',import.meta.url),'utf8');const record=await load();
  for(const term of ['editCharacter','editSkills','editTalent','localStorage','setItem(','Ronin','Wandering Blade'])assert.equal(app.includes(term),false,term);
- assert.deepEqual(Object.keys(record).sort(),['character','release','version']);assert.equal(record.release,'ling-3.0.0');
+ assert.deepEqual(Object.keys(record).sort(),['character','release','version']);assert.equal(record.release,'ling-3.0.1');
  const publicText=JSON.stringify({...record.character,portrait:''});
  for(const term of ['Ronin','Hamilton','Elena','narrator','private/','human rules'])assert.equal(publicText.includes(term),false,term);
 });

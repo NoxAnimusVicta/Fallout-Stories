@@ -4,6 +4,8 @@ Current through Session 1, release 2.1.0. This document and SPECIAL clarificatio
 
 ## Latest accepted rules
 
+- P061: Awareness is the renamed Perception skill for noticing, searching and detecting threats. It remains governed by SPECIAL Perception (underlying Cunning). Existing ranks, career status, XP costs, talent references and training credit transfer unchanged. Vigilance remains a separate skill. Historical source references to the Perception skill mean Awareness.
+
 - All otherwise unspent Advantage outside combat recovers 1 strain each unless the player specifies otherwise. Includes the end-of-encounter recovery check; replaces, does not stack with, its older two-Advantage rate. Minimum strain 0. In combat, the player chooses spends.
 - After an encounter, make one Simple Cool or Discipline check: recover 1 strain per Success, plus the default above. Adequate full sleep clears strain; a session boundary or drink does not.
 - Session XP: 5 for management/downtime; 10–15 for significant combat/objectives; 20–25 for exceptional sessions; 25 gameplay maximum. No XP per die roll, kill or message. Training awards stay in separate ledgers. Session 1 awards 10 unrestricted XP once; no purchases made.
