@@ -7,7 +7,7 @@ const load=async()=>JSON.parse(await readFile(new URL('../docs/character.json',i
 test('Ling opens with a valid 110 XP human Gunslinger build and no inherited progress',async()=>{
  const {character:c}=await load();validateCharacter(c);
  assert.equal(c.name,'Ling');assert.equal(c.career,'Smuggler');assert.equal(c.specialization,'Gunslinger');
- assert.equal(c.session.status,'not-started');assert.equal(c.session.earnedXp,0);assert.equal(c.xp,0);
+ assert.equal(c.session.status,'active');assert.equal(c.session.earnedXp,0);assert.equal(c.xp,0);
  assert.equal(c.creationLedger.reduce((n,e)=>n+e.cost,0),110);
  assert.equal(c.totalXp-c.session.spentXp,c.xp);assert.equal(c.xpLedger.length,0);
  assert.equal(Object.values(c.skills).reduce((n,s)=>n+s.rank,0),9);
@@ -31,7 +31,7 @@ test('two pistols consume separate magazines and share exactly twelve reserve ro
 test('public projection is read-only and excludes prior campaign and private payloads',async()=>{
  const app=await readFile(new URL('../docs/app.js',import.meta.url),'utf8');const record=await load();
  for(const term of ['editCharacter','editSkills','editTalent','localStorage','setItem(','Ronin','Wandering Blade'])assert.equal(app.includes(term),false,term);
- assert.deepEqual(Object.keys(record).sort(),['character','release','version']);assert.equal(record.release,'ling-3.0.1');
+ assert.deepEqual(Object.keys(record).sort(),['character','release','version']);assert.equal(record.release,'ling-3.0.2');
  const publicText=JSON.stringify({...record.character,portrait:''});
  for(const term of ['Ronin','Hamilton','Elena','narrator','private/','human rules'])assert.equal(publicText.includes(term),false,term);
 });
