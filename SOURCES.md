@@ -12,7 +12,7 @@ The app uses the approved silhouette 2 wearable-vehicle approach, integer round-
 
 Primary reference compilation: [Independent Fallout Wiki](https://fallout.wiki/). Cross-check compilation: [Gamer Guides Fallout 4 database](https://www.gamerguides.com/fallout-4/database). Exact item/table links remain on every record; consult those rather than interpreting these home pages as item citations. Services, wages and unconfirmed estimates are in the separate economy PDF, clearly distinguished from confirmed item values.
 
-No Fallout 4 combat stats are automatically converted into EotE weapon profiles. The radiation icon is original SVG artwork with PNG derivatives. Ronin’s user-supplied portrait is preserved from the approved published record. No other companion’s character or campaign content is bundled. UI structure was informed by [Cyberpunk Stories](https://github.com/NoxAnimusVicta/Cyberpunk-Stories); its private campaign content and character were not copied.
+No Fallout 4 combat stats are automatically converted into EotE weapon profiles. The radiation icon is original SVG artwork with PNG derivatives. Ling’s supplied aviator portrait is retained unchanged. No other companion’s character or campaign content is bundled. UI structure was informed by [Cyberpunk Stories](https://github.com/NoxAnimusVicta/Cyberpunk-Stories); its private campaign content and character were not copied.
 
 
 ## Interface palette
@@ -23,7 +23,7 @@ The Pip-Boy phosphor accent is RGB (20, 255, 23), #14ff17, obtained by rounding 
 
 The supplied Standard_Galactica_Ruleset.md, XP Allocation → Session XP (lines3221–3223), establishes 5 /10–15 /20–25 XP bands and 25 maximum. This session awards 10 unrestricted XP. The source ruleset is not redistributed. Character creation remains 110 spent XP; the session award is unspent.
 
-Weapon combat profiles are adopted EotE slugthrower profiles, with campaign-specific calibre/capacity. They are not claimed Fallout game damage conversions. The JSON weapon `cost` field means ammunition per attack, not item value; resale valuations remain pending.
+Weapon combat profiles are adopted EotE slugthrower profiles, with campaign-specific calibre/capacity. They are not claimed Fallout game damage conversions. The JSON weapon `cost` field means ammunition per attack, not item value. The played sale and expenses are itemized in docs/references/ling-session-01.md; no loot remains awaiting sale.
 
 Public summaries contain played events and disclosed information only. Private narrator plans, full transcripts and raw source documents remain local.
 
@@ -31,4 +31,4 @@ Public summaries contain played events and disclosed information only. Private n
 
 Human creation: EotE core pp.48,80,92–94. Gunslinger career skills and talents: Fly Casual pp.30–33. Published row/column placement retained; campaign vertical prerequisites replace connections. Core pp.210–211 govern two-weapon attacks. Each participating pistol expends one round under the tracked-ammunition campaign rule. The primary sourcebooks are not redistributed.
 
-Pistols use the core slugthrower pistol combat profile (p.160), with Fallout .38 / 12-round configuration. Equipment and 20 caps are a modest starting allocation, not currency conversion. Oath 10 uses the solo campaign baseline. Ling’s portrait is user supplied. No extra XP from backstory or Obligation.
+Pistols use the core slugthrower pistol combat profile (p.160), with a campaign .38 configuration. P092 supersedes the original 12-round capacity: semiautomatic, five-round fixed internal magazines, stripper-clip or loose-round loading. Equipment and 20 caps were the starting allocation, not currency conversion. Current release 3.1.0 records 170 caps, 5 rounds in each pistol and 16 loose reserve. Oath 10 uses the solo campaign baseline. No extra XP from backstory or Obligation.

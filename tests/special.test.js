@@ -15,7 +15,7 @@ test('SPECIAL converts the approved build without changing dice or Destiny; Ling
   assert.deepEqual(skillPool(trained,skill),{ability:2,proficiency:1});
  }
  assert.equal(attribute(c,'Brawn'),2);assert.equal(c.weapons[0].damage,4);
- assert.equal(c.destinyRemaining,1);assert.equal(c.caps,20);
+ assert.equal(c.destinyRemaining,1);assert.equal(c.caps,170);
  assert.equal(specialName('Willpower'),'Endurance');
  assert.equal(specialDescriptor('Agility',4),'Butterfingers');
  assert.equal(specialDescriptor('Agility',5),'Under Control');

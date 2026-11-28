@@ -2,7 +2,9 @@
 
 Ling’s read-only Fallout / EotE companion: https://noxanimusvicta.github.io/Fallout-Stories/
 
-Release 3.0.2 opens Ling automatically. Human Smuggler / Gunslinger, 110 starting XP spent, 0 earned, 20 caps, wounds 0/12, strain 0/12, Destiny 1/1. Two .38 pipe pistols with 12 loaded each and 12 shared reserve rounds. Session 1 has opened at The Last Resort in Tijuana. Updated portrait includes aviator sunglasses.
+Release 3.1.0 opens Ling automatically at the end of Session 1: 1 January 2275, 9:00 PM, his rented room at The Last Resort, Tijuana. Human Smuggler / Gunslinger: 110 starting XP spent, 10 earned and available, 120 total. 170 caps; wounds 3/12, strain 3/12, Destiny 1/1. Two semiautomatic .38 pipe pistols with fixed five-round internal magazines, 5 loaded each and 16 shared loose reserve rounds. Aviator portrait retained. Sleep has begun; overnight recovery is pending.
+
+See [Session 1 ledger](docs/references/ling-session-01.md) for the bounty, expenses, ammunition and SGR XP award.
 
 Character, Gunslinger Talents, Inventory, Health, Assets and Journal show the maintained record. No player import or editing is needed. The existing blue radiation icon and Pip-Boy palette remain. Ronin’s previous public record remains in Git history; his private campaign archive is retained locally. No XP, possessions or journal events transfer to Ling.
 

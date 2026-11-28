@@ -1,6 +1,6 @@
 # Current Fallout campaign rules
 
-Current through Session 1, release 2.1.0. This document and SPECIAL clarifications supersede conflicting wording in the bundled base conversion PDF. The economy PDF and 668-item source roster remain the economic authority. No Star Wars currency/prices or Force rules are imported.
+Current through Ling Session 1, release 3.1.0. Ronin-specific examples below are historical and do not describe Ling. This document and SPECIAL clarifications supersede conflicting wording in the bundled base conversion PDF. The economy PDF and 668-item source roster remain the economic authority. No Star Wars currency/prices or Force rules are imported.
 
 ## Latest accepted rules
 
@@ -8,11 +8,14 @@ Current through Session 1, release 2.1.0. This document and SPECIAL clarificatio
 
 - All otherwise unspent Advantage outside combat recovers 1 strain each unless the player specifies otherwise. Includes the end-of-encounter recovery check; replaces, does not stack with, its older two-Advantage rate. Minimum strain 0. In combat, the player chooses spends.
 - After an encounter, make one Simple Cool or Discipline check: recover 1 strain per Success, plus the default above. Adequate full sleep clears strain; a session boundary or drink does not.
-- Session XP: 5 for management/downtime; 10–15 for significant combat/objectives; 20–25 for exceptional sessions; 25 gameplay maximum. No XP per die roll, kill or message. Training awards stay in separate ledgers. Session 1 awards 10 unrestricted XP once; no purchases made.
+- Session XP: 5 for management/downtime; 10–15 for significant combat/objectives; 20–25 for exceptional sessions; 25 gameplay maximum. No XP per die roll, kill or message. Training awards stay in separate ledgers. Ling Session 1 awards 10 unrestricted XP once; no purchases made. Ronin’s separate historical award does not transfer.
 - SPECIAL is doubled display only. Blade Technique uses Agility for checks AND Melee damage contribution. Both Piloting skills use Perception. See [SPECIAL clarifications](special.md).
 - Personal Destiny refreshes at gameplay-session start only. No shared pool, flip, reload refresh or session-end refill.
 - Distinct Personal/Vehicle range bands; weapon range scale and damage scale are independent. Power armor silhouette 2, personal movement, vehicle Armour/hull. Each 10 Pierce ignores 1 Armour; lesser Pierce does not. After Armour blocks 10 damage per point, positive remainder rounds UP to whole hull trauma (Armour 1: 11–19 damage causes 1 hull trauma).
-- Track loaded ammunition separately from shared reserves. Ordinary attacks spend their ammo cost even on a miss; no ammo was spent from Ronin’s recovered guns during Session 1.
+- Track loaded ammunition separately from shared reserves. Ordinary attacks spend their ammo cost even on a miss; each pistol committed to a dual attack spends one round even if the second hit is not activated.
+
+- Ling’s pistols: semiautomatic, five-round fixed internal magazines. Each reload takes one action with loose rounds or one maneuver with a prepared stripper clip, freeing a hand as necessary. No prepared clips owned.
+- P095 accepted campaign extension: a sudden draw and attack against unsuspecting targets can grant one surprise attack before initiative with one Boost, even without a prior Stealth check. Quick Strike stacks and remains eligible in the first initiative round against a target that has not acted. This extends the written SGR stealth ambush rule; it does not grant repeated surprise during an ongoing fight.
 
 ## Adopted training, injury and recovery framework
 
